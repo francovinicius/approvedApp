@@ -1,5 +1,6 @@
 package com.vinicius.helloworld
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.vinicius.helloworld.databinding.ActivityMainBinding
@@ -25,9 +26,11 @@ class MainActivity : AppCompatActivity() {
 
             if (media >= 6 && faltas < 10) {
                 resultado.setText("Aluno foi aprovado." + "\n" + "\n" + "Média: ${media}." + "\n" + "\n" + "Falta(s): ${faltas}.")
+                resultado.setTextColor(Color.parseColor("#07F1D4"))
 
             }else {
                     resultado.setText("Aluno foi reprovado." + "\n" + "\n" + "Média: ${media}." + "\n" + "\n" + "Falta(s): ${faltas}.")
+                    resultado.setTextColor(Color.RED)
             }
         }
 
