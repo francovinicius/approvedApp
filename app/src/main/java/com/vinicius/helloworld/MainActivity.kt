@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.vinicius.helloworld.databinding.ActivityMainBinding
+import android.os.Handler
 
 
 class MainActivity : AppCompatActivity() {
@@ -39,6 +40,16 @@ class MainActivity : AppCompatActivity() {
                     binding.imageViewAprovado.visibility = View.GONE
                     binding.imageViewReprovado.visibility = View.VISIBLE
             }
+
+            //limpar campos após 5 segundos
+            Handler().postDelayed({
+                binding.nota1.text.clear()
+                binding.nota2.text.clear()
+                binding.faltas.text.clear()
+                resultado.text = ""
+                binding.imageViewAprovado.visibility = View.GONE
+                binding.imageViewReprovado.visibility = View.GONE
+            }, 5000)
         }
 
     }
