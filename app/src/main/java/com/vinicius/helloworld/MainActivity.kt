@@ -3,6 +3,7 @@ package com.vinicius.helloworld
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.vinicius.helloworld.databinding.ActivityMainBinding
 
 
@@ -28,9 +29,15 @@ class MainActivity : AppCompatActivity() {
                 resultado.setText("Aluno foi aprovado." + "\n" + "\n" + "Média: ${media}." + "\n" + "\n" + "Falta(s): ${faltas}.")
                 resultado.setTextColor(Color.parseColor("#07F1D4"))
 
+                binding.imageViewAprovado.visibility = View.VISIBLE
+                binding.imageViewReprovado.visibility = View.GONE
+
             }else {
                     resultado.setText("Aluno foi reprovado." + "\n" + "\n" + "Média: ${media}." + "\n" + "\n" + "Falta(s): ${faltas}.")
                     resultado.setTextColor(Color.RED)
+
+                    binding.imageViewAprovado.visibility = View.GONE
+                    binding.imageViewReprovado.visibility = View.VISIBLE
             }
         }
 
