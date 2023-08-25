@@ -1,4 +1,4 @@
-# ApprovedApp
+![Meu Portfólio](https://github.com/francovinicius/approvedApp/blob/main/ApproveApp.svg)
 
 O **ApprovedApp** é um aplicativo simples desenvolvido em Kotlin que permite determinar se um aluno foi aprovado ou reprovado com base em critérios predefinidos, como a média de notas e o número de faltas.
 
